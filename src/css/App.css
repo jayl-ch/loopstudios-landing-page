@@ -1,0 +1,9 @@
+@import "./settings/variables.css";
+/* @import "./tools/"; */
+@import "./generics/reset.css";
+@import "./elements/element.css";
+/* @import "./objects/"; */
+@import "./components/home.css";
+@import "./components/navbar.css";
+/* @import "./utilities/"; */
+

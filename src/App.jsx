@@ -1,7 +1,14 @@
-import "./App.css";
+import "./css/App.css";
+import Header from "./components/Header.jsx";
+import Main from "./components/Main.jsx";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Header />
+      <Main />
+    </>
+  );
 }
 
 export default App;

@@ -4,6 +4,7 @@
   --primary-white: hsl(0, 0%, 100%);
   --primary-black: hsl(0, 0%, 0%);
   --primary-grey-200: hsl(0, 0%, 85%);
+  --primary-grey-500: hsl(0, 0%, 50%);
 
   /* typography */
   --font-size: 15px;

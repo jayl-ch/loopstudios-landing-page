@@ -26,7 +26,7 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [https://vercel.com/jayl-chs-projects/loopstudio-landing-page/7DZXTBukZ9gBPkCayBaNP48ySf3c](https://vercel.com/jayl-chs-projects/loopstudio-landing-page/7DZXTBukZ9gBPkCayBaNP48ySf3c)
+- Live Site URL: [https://loopstudio-landing-page-psi.vercel.app/](https://loopstudio-landing-page-psi.vercel.app/)
 
 ## My process
 

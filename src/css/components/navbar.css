@@ -1,12 +1,12 @@
 .navbar {
-  border: solid red;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
   left: 0;
   right: 0;
-  padding: 1rem;
+  max-width: 1200px;
+  margin-inline: auto;
+  width: 100%;
 }
 
 .navbar__brand-title {
@@ -23,7 +23,6 @@
 }
 
 .navbar__close-btn {
-  border: solid red;
   background: none;
   border: none;
 }
@@ -41,10 +40,11 @@
   inset: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  padding-block-start: 5rem;
   transform: translateX(-100vw);
-  gap: 5rem;
+  gap: 8rem;
   padding-inline: 1.5rem;
+  z-index: 100;
 }
 
 .navbar__lists-wrapper.active {
@@ -54,6 +54,8 @@
 .navbar__lists {
   padding-inline-start: 0;
   display: grid;
+  list-style: none;
+  padding-inline-start: 0;
   gap: 1rem;
 }
 
@@ -63,10 +65,54 @@
   font-family: var(--font-josefin);
   font-weight: 300;
   font-size: 2rem;
+  position: relative;
+  display: flex;
+}
+
+@media (width > 62.5rem) {
+  .navbar__lists-wrapper {
+    position: static;
+    transform: translateX(0);
+    padding-block: 0;
+    background: none;
+  }
+
+  .navbar__lists {
+    display: flex;
+  }
+
+  .navbar-links {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .navbar__menu-btn {
+    display: none;
+  }
+
+  .close-btn-wrapper {
+    display: none;
+  }
+
+  .navbar-links::after {
+    content: "";
+    width: 0;
+    border-block-end: solid var(--primary-grey-200);
+    position: absolute;
+    bottom: -0.5rem;
+  }
+
+  .navbar-links:hover::after {
+    width: 100%;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {
   .navbar__lists-wrapper {
     transition: transform 200ms ease;
+  }
+
+  .navbar-links::after {
+    transition: width 0.2s ease;
   }
 }

@@ -32,7 +32,7 @@ const NavList = ({ isActive, toggleMenu }) => (
     </div>
     <ul className="navbar__lists">
       {["About", "Careers", "Events", "Products", "Support"].map((item) => (
-        <li className="navbar-item">
+        <li key={item} className="navbar-item">
           <a className="navbar-links" href="">
             {item}
           </a>
@@ -42,13 +42,15 @@ const NavList = ({ isActive, toggleMenu }) => (
   </div>
 );
 
-const NavBrand = () => (
-  <div className="navbar__brand">
-    <a href="" className="navbar__brand-title">
-      loopstudios
-    </a>
-  </div>
-);
+export function NavBrand() {
+  return (
+    <div className="navbar__brand">
+      <a href="" className="navbar__brand-title">
+        loopstudios
+      </a>
+    </div>
+  );
+}
 
 const Navbar = ({ isActive, toggleMenu }) => (
   <nav className="navbar">
@@ -60,7 +62,7 @@ const Navbar = ({ isActive, toggleMenu }) => (
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
-  const toggleMenu = () => setIsActive(!isActive);
+  const toggleMenu = () => setIsActive((v) => !v);
 
   return (
     <header>
